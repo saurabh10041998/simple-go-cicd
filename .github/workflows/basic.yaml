@@ -18,3 +18,5 @@ jobs:
         run: |
           echo This is first line
           echo "I am in $HOME"
+      - name: Check if rust is installed
+        run: cargo --version
