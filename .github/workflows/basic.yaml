@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run one line shell script
+        run: echo Hello, Hello world
+      - name: Run multiline shell script
+        run: |
+          echo This is first line
+          echo "I am in $HOME"
